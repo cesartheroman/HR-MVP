@@ -8,7 +8,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(express.static('dist'));
 
-app.get('/', (req, res) => res.send('Romandex'));
+app.get('/', (req, res) => res.send('test'));
 
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
