@@ -17,6 +17,7 @@ class App extends Component {
     this.showPokemon = this.showPokemon.bind(this);
     this.updateDescription = this.updateDescription.bind(this);
     this.updateParty = this.updateParty.bind(this);
+    this.deleteFromParty = this.deleteFromParty.bind(this);
   }
 
   showPokemon(pokemon) {
@@ -47,6 +48,15 @@ class App extends Component {
     }
   }
 
+  deleteFromParty(pokemonToDel) {
+    console.log('partypoke: ', this.state.partyPokemon);
+    this.state.partyPokemon.forEach((poke) => {
+      if (poke.name === pokemonToDel) {
+        this.setState({});
+      }
+    });
+  }
+
   render() {
     return (
       <div className="container">
@@ -61,7 +71,10 @@ class App extends Component {
         ) : null}
         <h3 className="titleName">Build Your Party of 6!</h3>
         {this.state.showTeam ? (
-          <TeamBuilder pokemon={this.state.partyPokemon} />
+          <TeamBuilder
+            pokemons={this.state.partyPokemon}
+            deleteFromParty={this.deleteFromParty}
+          />
         ) : null}
       </div>
     );
