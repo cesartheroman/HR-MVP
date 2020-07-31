@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-export default function TeamBuilder({ pokemon }) {
+const TeamBuilder = ({ pokemon }) => {
   return (
     <div className="teamContainer">
       {pokemon.map((pokemon, i) => {
@@ -15,4 +15,6 @@ export default function TeamBuilder({ pokemon }) {
       })}
     </div>
   );
-}
+};
+
+export default TeamBuilder;
