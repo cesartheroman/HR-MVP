@@ -2,9 +2,9 @@ import React from 'react';
 
 const TeamBuilder = ({ pokemons, deleteFromParty }) => {
   const update = (e) => {
-    console.log('value: ', e.target.name);
     deleteFromParty(e.target.name);
   };
+
   return (
     <div className="teamContainer">
       {pokemons.map((pokemon, i) => {
