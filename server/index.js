@@ -3,14 +3,15 @@ const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const router = require('./routes/routes');
-const port = 3000;
+let port = process.env.PORT;
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(express.static('dist'));
 
-// app.use('/', router);
-
+if (port == null || port == '') {
+  port = 8000;
+}
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
 );
