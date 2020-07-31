@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon server/index.js",
     "build-dev": "webpack -d --mode development --watch",
-    "build-prod": "webpack -p --mode production"
+    "build-prod": "webpack -p --mode production",
+    "postinstall": "npm run build-dev"
   },
   "repository": {
     "type": "git",
