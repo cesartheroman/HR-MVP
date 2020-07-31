@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleName,
+.searchBar,
+.summaryContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.teamContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
