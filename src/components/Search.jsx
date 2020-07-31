@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import { getPokemonByName, getPokemonDesc } from '../../helpers/pokeApi';
 
 export default function SearchBar(props) {
