@@ -49,11 +49,15 @@ class App extends Component {
   }
 
   deleteFromParty(pokemonToDel) {
-    console.log('partypoke: ', this.state.partyPokemon);
-    this.state.partyPokemon.forEach((poke) => {
-      if (poke.name === pokemonToDel) {
-        this.setState({});
-      }
+    const updatedParty = this.state.partyPokemon.filter((pokemon) => {
+      return pokemon.name !== pokemonToDel;
+    });
+    const updatedNames = this.state.partyNames.filter((name) => {
+      return name !== pokemonToDel;
+    });
+    this.setState({
+      partyPokemon: updatedParty,
+      partyNames: updatedNames,
     });
   }
 
