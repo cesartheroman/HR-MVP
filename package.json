@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/cesartheroman/HR-MVP#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "express": "^4.17.3",
     "morgan": "^1.10.0",
     "pg": "^8.3.0",
